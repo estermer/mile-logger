@@ -79,9 +79,32 @@ app.use('/:username/join-team', joinTeamController);
 
 
 /******************FRONTEND RENDERING*************/
+//HOME PAGE
 app.get('/', function(req, res){
   res.render('home')
 });
+
+//REGISTER USER
+app.post('/register', function(req, res){
+  User.register(new User({
+    username: req.body.username
+  }),
+  req.body.password,
+  function(err, user){
+    if(err) res.redirect('/');
+    //auto login after signup
+    req.login(user, function(err) {
+      if (err) { return next(err); }
+      return res.redirect('/' + req.user.username + '/runs');
+    });
+  });
+});
+
+//LOG USER IN
+app.post('/login', passport.authenticate('local'), function(req, res){
+  res.redirect('/' + req.user.username + '/runs')
+});
+
 /*************************************************/
 
 

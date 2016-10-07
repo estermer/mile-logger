@@ -13,7 +13,7 @@ $(function(){
     var password = "<input class='login-register' type='password' name='password' placeholder='ENTER A PASSWORD'><br>";
     var submit = "<input class='submit-button' type='submit' name='register' value='REGISTER'>"
 
-    $form.html(username + password + submit);
+    $form.html(username + password + submit).attr('action', '/register').attr('method', 'POST');
     //remember to add the attr for the method and the action
 
     // add form into main
@@ -30,7 +30,7 @@ $(function(){
     var password = "<input class='login-register' type='password' name='password' placeholder='ENTER YOUR PASSWORD'><br>";
     var submit = "<input class='submit-button' type='submit' name='login' value='LOGIN'>"
 
-    $form.html(username + password + submit);
+    $form.html(username + password + submit).attr('action', '/login').attr('method', 'POST');
     //remember to add the attr for the method and the action
 
     // add form into main
