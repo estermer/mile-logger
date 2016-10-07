@@ -21,6 +21,7 @@ var bodyParser = require('body-parser');
 /******************MONGOOSE***********************/
 var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/milelogger';
 mongoose.connect(mongoURI);
+mongoose.Promise = global.Promise;
 /*************************************************/
 
 
