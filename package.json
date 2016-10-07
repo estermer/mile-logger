@@ -2,7 +2,7 @@
   "name": "mile-logger",
   "version": "1.0.0",
   "description": "an app to log runs for runners",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
