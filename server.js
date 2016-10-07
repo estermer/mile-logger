@@ -15,7 +15,6 @@ var methodOverride = require('method-override');
 var hbs = require('hbs');
 var passport = require('passport');
 var bodyParser = require('body-parser');
-
 /*************************************************/
 
 
@@ -51,6 +50,10 @@ app.set('views', './views');
 
 
 /******************CONTROLLERS********************/
+var editRunController = require('./controllers/edit-run.js');
+var newRunController = require('./controllers/new-run.js');
+var runsController = require('./controllers/runs.js');
+var paceCalcController = require('./controllers/pace-calc.js');
 /*************************************************/
 
 
