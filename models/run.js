@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 
 var RunSchema = new Schema({
   runName: String,
+  date: String,
   distance: Number,
   time: String,
   pace: String,

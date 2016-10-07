@@ -79,6 +79,9 @@ app.use('/:username/join-team', joinTeamController);
 
 
 /******************FRONTEND RENDERING*************/
+app.get('/', function(req, res){
+  res.render('home')
+});
 /*************************************************/
 
 

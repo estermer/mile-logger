@@ -3,9 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>Mile Logger</title>
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
+    <script src="/js/dom.js" charset="utf-8"></script>
   </head>
   <body>
+
+    <header>
+      <div id="logo">
+        <a href="/"><h2>MILE LOGGER</h2></a>
+      </div>
+      <nav>
+        <ul>
+          {{#if user}}
+          <li><a href="#">Home</a></li>
+          {{else}}
+          <li id="register">Register</li>
+          <li id="login">Login</li>
+          {{/if}}
+
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Pace Calculator</a></li>
+          {{#if user}}
+          <li id="logout">Logout</li>
+          {{/if}}
+
+        </ul>
+      </nav>
+    </header>
+    <h1>{{title}}</h1>
     {{{body}}}
+
+    <footer>Created by: Eric Stermer</footer>
   </body>
 </html>
