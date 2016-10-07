@@ -1,0 +1,25 @@
+{
+  "name": "mile-logger",
+  "version": "1.0.0",
+  "description": "an app to log runs for runners",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estermer/mile-logger.git"
+  },
+  "author": "Eric Stermer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estermer/mile-logger/issues"
+  },
+  "homepage": "https://github.com/estermer/mile-logger#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "engines": {
+    "node": "6.3.1"
+  }
+}
