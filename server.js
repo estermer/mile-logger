@@ -1,7 +1,9 @@
-//Created By Eric Stermer - General Assembly WDIR //
+/*************************************************/
+//Created By Eric Stermer - General Assembly WDIR//
 /*************************************************/
 
 /******************EXTERNAL FILES*****************/
+var User = require("./models/user.js");
 /*************************************************/
 
 
@@ -43,9 +45,20 @@ app.set('views', './views');
 
 /******************PASSPORT CONFIG****************/
 //Strategies
+var LocalStrategy = require('passport-local').Strategy;
 
 //Middleware
+app.use(require('express-session')({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
+passport.use(User.model.createStrategy());
+passport.serializeUser(User.model.serializeUser());
+passport.deserializeUser(User.model.deserializeUser());
 /*************************************************/
 
 
