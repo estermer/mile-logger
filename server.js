@@ -37,6 +37,8 @@ app.use(bodyParser.urlencoded({  // to support URL-encoded bodies
 
 
 /******************HANDLEBARS*********************/
+app.set('view engine', 'hbs');
+app.set('views', './views');
 /*************************************************/
 
 
