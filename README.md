@@ -16,3 +16,31 @@ stories, and wirefram the general design for this Mile Logger app.
 Mile logger is going to be an app allowing for users to log in, be a part of a team,
 view each other team members log, log new runs, an hopefully even get map my run
 functionality and a VDOT calculator to calculate pace.
+
+### Day 5
+Data Modeling
+```
+TEAM {
+  name: String,
+  joinPassword: String,
+  members: [UserSchema]
+}
+
+USER {
+  username: String,
+  password: String,
+  runningLog: [RunSchema],
+  longestRun: RunSchema,
+  fastestRun: RunSchema,
+  team: String
+}
+
+RUN {
+  runName: String,
+  distance: Number,
+  time: String,
+  pace: String,
+  rpe: Number,
+  description: String
+}
+```
