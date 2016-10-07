@@ -54,6 +54,12 @@ var editRunController = require('./controllers/edit-run.js');
 var newRunController = require('./controllers/new-run.js');
 var runsController = require('./controllers/runs.js');
 var paceCalcController = require('./controllers/pace-calc.js');
+var weeklyMileageController = require('./controllers/weekly-mileage.js');
+app.use('/:username/edit-run', editRunController);
+app.use('/:username/new-run', newRunController);
+app.use('/:username/runs', runsController);
+app.use('/pace-calculator', paceCalcController);
+app.use('/:username/weekly-mileage', weeklyMileageController);
 /*************************************************/
 
 
