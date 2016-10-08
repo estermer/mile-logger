@@ -26,7 +26,9 @@
           <li><a href="#">Team</a></li>
           <li><a href="#">Pace Calculator</a></li>
           {{#if username}}
-          <li id="logout">Logout</li>
+          <form action="/logout?_method=DELETE" method="POST">
+            <input id="logout" type="submit" value="Logout">
+          </form>
           {{/if}}
 
         </ul>

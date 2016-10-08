@@ -39,6 +39,17 @@ nav > ul {
   justify-content: space-around;
 }
 
+#logout {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border-style: none;
+  background-color: inherit;
+}
+#logout:hover {
+  cursor: pointer;
+}
+
 
 footer {
   position: absolute;

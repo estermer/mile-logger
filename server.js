@@ -89,8 +89,14 @@ app.get('/:username', function(req, res){
   if (!req.user || req.user.username != req.params.username) {
     res.redirect('/');
   } else {
-    var user = User.findOne({username: username});
-    res.render('index', user);
+    User.findOne({username: req.user.username}, function(err, user){
+      if(err)console.log(err);
+      console.log(user.username);
+      res.render('index', {
+        username: req.user.username,
+        runningLog: user.runningLog
+      });
+    });
   }
 });
 
