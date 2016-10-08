@@ -38,7 +38,7 @@ $(function(){
 
   });
 
-  $('#logout').on('click', function(){
+  $('nav ul').on('click', '#logout', function(){
     console.log("Logout");
     $.ajax({
       method: "DELETE",

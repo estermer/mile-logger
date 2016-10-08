@@ -80,11 +80,16 @@ main > h1 {
 /***************INDEX********************************/
 
 #run-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 30%;
+  height: 500px;
+  margin: 0 auto;
   font-family: 'Lalezar', cursive;
+}
 
+#run-list > h1 {
+  text-align: center;
+  font-size: 50px;
+  color: #e74c3c;
 }
 
 
