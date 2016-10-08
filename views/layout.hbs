@@ -16,8 +16,8 @@
       </div>
       <nav>
         <ul>
-          {{#if user}}
-          <li><a href="/{{user}}">Home</a></li>
+          {{#if username}}
+          <li><a href="/{{username}}">Home</a></li>
           {{else}}
           <li id="register">Register</li>
           <li id="login">Login</li>
@@ -25,7 +25,7 @@
 
           <li><a href="#">Team</a></li>
           <li><a href="#">Pace Calculator</a></li>
-          {{#if user}}
+          {{#if username}}
           <li id="logout">Logout</li>
           {{/if}}
 

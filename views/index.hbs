@@ -4,8 +4,8 @@
     <button>CLICK HERE TO ADD A RUN</button>
   </div>
   <ul>
-    {{#each runList}}
-    <li>{{date}} {{distance}}</li>
+    {{#each runningLog}}
+    <li>{{runningLog.date}} {{runningLog.distance}}</li>
     {{/each}}
     <li>Run 1</li>
     <li>Run 2</li>

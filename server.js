@@ -4,6 +4,7 @@
 
 /******************EXTERNAL FILES*****************/
 var User = require("./models/user.js").model;
+var logic = require('./public/js/logic.js');
 /*************************************************/
 
 
@@ -88,9 +89,8 @@ app.get('/:username', function(req, res){
   if (!req.user || req.user.username != req.params.username) {
     res.redirect('/');
   } else {
-    res.render('index', {
-      user: req.user
-    });
+    var user = User.findOne({username: username});
+    res.render('index', user);
   }
 });
 
