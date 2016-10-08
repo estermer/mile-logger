@@ -3,7 +3,7 @@
 /*************************************************/
 
 /******************EXTERNAL FILES*****************/
-var User = require("./models/user.js");
+var User = require("./models/user.js").model;
 /*************************************************/
 
 
@@ -56,9 +56,9 @@ app.use(require('express-session')({
 app.use(passport.initialize());
 app.use(passport.session());
 
-passport.use(User.model.createStrategy());
-passport.serializeUser(User.model.serializeUser());
-passport.deserializeUser(User.model.deserializeUser());
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 /*************************************************/
 
 
