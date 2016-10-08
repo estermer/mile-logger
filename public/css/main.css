@@ -13,12 +13,12 @@ a {
 header {
     max-width: 100vw;
     height: 50px;
-    background: #efefef;
+    background: #dadfe1;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     font-family: 'Lalezar', cursive;
-    color: #e74c3c;
+    color: #f1c40f;
 }
 
 #logo {
@@ -57,10 +57,10 @@ footer {
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: #efefef;
+  background-color: #dadfe1;
   text-align: center;
   font-family: 'Lalezar', cursive;
-  color: #e74c3c;
+  color: #f1c40f;
 }
 /****************************************************/
 
@@ -75,7 +75,7 @@ main {
   margin: 0 auto;
   text-align: center;
   font-family: 'Lalezar', cursive;
-  text-shadow: 2px 2px #e74c3c;
+  color: #007cad;
 }
 
 main > h1 {
@@ -100,7 +100,7 @@ main > h1 {
 #run-list > h1 {
   text-align: center;
   font-size: 50px;
-  color: #e74c3c;
+  color: #007cad;
 }
 
 #run-list > div {

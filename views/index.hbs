@@ -1,16 +1,11 @@
 <div id="run-list">
-  <h1>YOUR RUNS</h1>
+  <h1>{{usernameDisplay}} MILES</h1>
   <div>
     <a href="/{{username}}/new-run"><button>CLICK HERE TO ADD A RUN</button></a>
   </div>
   <ul>
     {{#each runningLog}}
-    <li>{{runningLog.date}} {{runningLog.distance}}</li>
+    <li>{{date}}: {{distance}} miles</li>
     {{/each}}
-    <li>Run 1</li>
-    <li>Run 2</li>
-    <li>Run 3</li>
-    <li>Run 4</li>
-    <li>Run 5</li>
   </ul>
 </div>

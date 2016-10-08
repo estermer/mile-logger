@@ -91,9 +91,10 @@ app.get('/:username', function(req, res){
   } else {
     User.findOne({username: req.user.username}, function(err, user){
       if(err)console.log(err);
-      console.log(user.username);
+      var usernameDisplay = (req.params.username).toUpperCase() + "'S";
       res.render('index', {
         username: req.user.username,
+        usernameDisplay: usernameDisplay,
         runningLog: user.runningLog
       });
     });
