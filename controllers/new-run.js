@@ -27,7 +27,7 @@ router.post('/create', function(req, res){
     }
     console.log(pace);
 
-    user.runningLog.push({
+    user.runningLog.unshift({
       runName: req.body.runName,
       date: req.body.date,
       distance: req.body.distance,
