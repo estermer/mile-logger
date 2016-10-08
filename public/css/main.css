@@ -92,6 +92,10 @@ main > h1 {
   color: #e74c3c;
 }
 
+#run-list > div {
+  text-align: center;
+}
+
 
 
 
