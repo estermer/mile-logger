@@ -75,7 +75,17 @@ main > h1 {
   margin: 20px;
 }
 
+/****************************************************/
 
+/***************INDEX********************************/
+
+#run-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Lalezar', cursive;
+
+}
 
 
 

@@ -105,6 +105,12 @@ app.post('/login', passport.authenticate('local'), function(req, res){
   res.redirect('/' + req.user.username + '/runs')
 });
 
+//LOG USER OUT
+app.delete('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
+
 /*************************************************/
 
 
