@@ -69,11 +69,13 @@ var newRunController = require('./controllers/new-run.js');
 var paceCalcController = require('./controllers/pace-calc.js');
 var weeklyMileageController = require('./controllers/weekly-mileage.js');
 var joinTeamController = require('./controllers/join-team.js');
+var runDeatailsController = require('./controllers/run-details.js');
 app.use('/:username/edit-run', editRunController);
 app.use('/:username/new-run', newRunController);
 app.use('/pace-calculator', paceCalcController);
 app.use('/:username/weekly-mileage', weeklyMileageController);
 app.use('/:username/join-team', joinTeamController);
+app.use('/:username/run-details', runDeatailsController);
 /*************************************************/
 
 
@@ -85,6 +87,7 @@ app.get('/', function(req, res){
   })
 });
 
+//USER HOME SHOWING LIST OF RUNS
 app.get('/:username', function(req, res){
   if (!req.user || req.user.username != req.params.username) {
     res.redirect('/');

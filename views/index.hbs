@@ -1,11 +1,22 @@
 <div id="run-list">
+
   <h1>{{usernameDisplay}} MILES</h1>
+
   <div>
-    <a href="/{{username}}/new-run"><button>CLICK HERE TO ADD A RUN</button></a>
+    <a href="/{{username}}/new-run">
+      <button>CLICK HERE TO ADD A RUN</button>
+    </a>
   </div>
+
   <ul>
     {{#each runningLog}}
-    <li>{{date}}: {{distance}} miles</li>
+    <li>
+      <a href="/{{../username}}/run-details/{{_id}}">
+        {{date}}: {{distance}} miles
+      </a>
+    </li>
     {{/each}}
+
   </ul>
+  
 </div>
