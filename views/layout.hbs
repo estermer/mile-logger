@@ -17,7 +17,7 @@
       <nav>
         <ul>
           {{#if user}}
-          <li><a href="#">Home</a></li>
+          <li><a href="/{{user}}">Home</a></li>
           {{else}}
           <li id="register">Register</li>
           <li id="login">Login</li>
@@ -32,7 +32,7 @@
         </ul>
       </nav>
     </header>
-    <h1>{{title}}</h1>
+
     {{{body}}}
 
     <footer>Created by: Eric Stermer</footer>

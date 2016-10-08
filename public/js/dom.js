@@ -37,4 +37,13 @@ $(function(){
     $('#home').html($form);
 
   });
+
+  $('#logout').on('click', function(){
+    console.log("Logout");
+    $.ajax({
+      method: "DELETE",
+      url: "/logout"
+    });
+
+  });
 });

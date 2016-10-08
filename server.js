@@ -65,13 +65,11 @@ passport.deserializeUser(User.deserializeUser());
 /******************CONTROLLERS********************/
 var editRunController = require('./controllers/edit-run.js');
 var newRunController = require('./controllers/new-run.js');
-var runsController = require('./controllers/runs.js');
 var paceCalcController = require('./controllers/pace-calc.js');
 var weeklyMileageController = require('./controllers/weekly-mileage.js');
 var joinTeamController = require('./controllers/join-team.js');
 app.use('/:username/edit-run', editRunController);
 app.use('/:username/new-run', newRunController);
-app.use('/:username/runs', runsController);
 app.use('/pace-calculator', paceCalcController);
 app.use('/:username/weekly-mileage', weeklyMileageController);
 app.use('/:username/join-team', joinTeamController);
@@ -81,7 +79,19 @@ app.use('/:username/join-team', joinTeamController);
 /******************FRONTEND RENDERING*************/
 //HOME PAGE
 app.get('/', function(req, res){
-  res.render('home')
+  res.render('home', {
+    user: req.user
+  })
+});
+
+app.get('/:username', function(req, res){
+  if (!req.user || req.user.username != req.params.username) {
+    res.redirect('/');
+  } else {
+    res.render('index', {
+      user: req.user
+    });
+  }
 });
 
 //REGISTER USER
@@ -95,14 +105,14 @@ app.post('/register', function(req, res){
     //auto login after signup
     req.login(user, function(err) {
       if (err) { return next(err); }
-      return res.redirect('/' + req.user.username + '/runs');
+      return res.redirect('/' + req.user.username);
     });
   });
 });
 
 //LOG USER IN
 app.post('/login', passport.authenticate('local'), function(req, res){
-  res.redirect('/' + req.user.username + '/runs')
+  res.redirect('/' + req.user.username)
 });
 
 //LOG USER OUT
