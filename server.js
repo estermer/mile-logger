@@ -96,7 +96,7 @@ app.get('/:username', function(req, res){
       if(err)console.log(err);
       var usernameDisplay = (req.params.username).toUpperCase() + "'S";
       res.render('index', {
-        username: req.user.username,
+        username: req.user,
         usernameDisplay: usernameDisplay,
         runningLog: user.runningLog
       });

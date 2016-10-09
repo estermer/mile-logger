@@ -9,7 +9,7 @@ router.get('/', function(req, res){
     res.redirect('/');
   } else {
     res.render('new', {
-      username: req.user.username
+      username: req.user
     });
   }
 });

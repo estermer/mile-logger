@@ -12,7 +12,7 @@ router.get('/:id', function(req, res){
       var runDetails = logic.findRun(user.runningLog, req.params.id);
 
       res.render('show', {
-        username: req.user.username,
+        username: req.user,
         runName: runDetails.runName,
         date: runDetails.date,
         distance: runDetails.distance,
