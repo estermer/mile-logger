@@ -1,3 +1,14 @@
+var kilometersToMiles = function(kilometer) {
+  kilometer = Number(kilometer);
+
+  return kilometer * 0.621371;
+};
+
+var milesToKilometers = function(miles) {
+  miles = Number(miles);
+
+  return miles * 1.60934;
+};
 
 var findRunIndex = function(runningLog, id){
   for(var i = 0; i < runningLog.length; i++){
@@ -56,7 +67,6 @@ var calculatePace = function(time, miles){
 
   return pace.join(':');
 };
-console.log(calculatePace("1:02:24", "9.2"));
 
 
 module.exports = {
