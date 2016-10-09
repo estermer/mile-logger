@@ -31,9 +31,9 @@ var findRun = function(runningLog, id){
   return run;
 };
 
-var calculatePace = function(time, miles){
+var calculatePace = function(time, dist){
   var pace = [];
-  miles = Number(miles);
+  dist = Number(dist);
   time = time.split(':');
 
   //change each element to an integer
@@ -55,7 +55,7 @@ var calculatePace = function(time, miles){
   });
 
   //divide time by miles and round
-  time = Math.round(time/miles);
+  time = Math.round(time/dist);
 
   //calculate new minutes and seconds and add to pace
   pace.push(Math.floor(time/60).toString());
