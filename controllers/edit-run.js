@@ -55,6 +55,23 @@ router.put('/:id/edit', function (req, res){
   });
 });
 
+//DELETE THE RUN
+router.delete('/:id/delete', function(req, res){
+
+  User.findOne({username: req.user.username}, function(err, user){
+    var runIndex = logic.findRunIndex(user.runningLog, req.params.id);
+
+    //removed the run from the runningLog
+    user.runningLog.splice(runIndex, 1);
+
+    user.save(function(err, user){
+      if(err)console.log(err);
+    });
+
+    res.redirect('/' + req.user.username);
+  });
+});
+
 
 
 module.exports = router;

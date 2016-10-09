@@ -10,6 +10,9 @@
   </ul>
 
   <div id="edit-button">
+    <form action="/{{username}}/edit-run/{{id}}/delete?_method=DELETE" method="POST">
+      <input id="delete-button" type="submit" name="delete" value="DELETE RUN">
+    </form>
     <a href="/{{username}}/edit-run/{{id}}"><button>EDIT RUN</button></a>
   </div>
 </div>

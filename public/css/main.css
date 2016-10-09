@@ -190,16 +190,13 @@ main > h1 {
   text-align: center;
 }
 
-#edit-button > a > button {
+#edit-button > a > button, #delete-button {
   font-family: 'Lalezar', cursive;
   background-color: #dadfe1;
   color: #007cad;
   border-style: none;
   border-radius: 5px;
 }
-
-
-
 
 
 /****************************************************/
