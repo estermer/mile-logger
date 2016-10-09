@@ -200,3 +200,24 @@ main > h1 {
 
 
 /****************************************************/
+
+/****************PACE CALCULATOR*********************/
+
+#pace-calc {
+  font-family: 'Lalezar', cursive;
+  width: 30%;
+  height: 500px;
+  margin: 0 auto;
+  color: #007cad;
+}
+
+[name=calculate] {
+  font-family: 'Lalezar', cursive;
+  background-color: #dadfe1;
+  color: #007cad;
+  border-style: none;
+  border-radius: 5px;
+}
+
+
+/****************************************************/
