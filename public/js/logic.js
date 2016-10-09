@@ -1,4 +1,15 @@
 
+var findRun = function(runningLog, id){
+
+  for(var i = 0; i < runningLog.length; i++){
+    if(runningLog[i]._id == id){
+      var run = runningLog[i];
+    }
+  }
+  
+  return run;
+};
+
 var calculatePace = function(time, miles){
   var pace = [];
   miles = Number(miles);
@@ -38,5 +49,6 @@ var calculatePace = function(time, miles){
 
 
 module.exports = {
+  findRun: findRun,
   calculatePace: calculatePace
 };

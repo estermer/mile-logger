@@ -157,3 +157,41 @@ main > h1 {
 }
 
 /****************************************************/
+
+
+/****************SINGLE RUN**************************/
+
+#show-run {
+  font-family: 'Lalezar', cursive;
+  width: 20%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+#show-run > h1, #show-run > h4{
+  color: #007cad;
+  text-align: center;
+}
+
+#show-run > h1 {
+  font-size: 50px;
+  margin-bottom: -20px;
+}
+
+#edit-button {
+  text-align: center;
+}
+
+#edit-button > button {
+  font-family: 'Lalezar', cursive;
+  background-color: #dadfe1;
+  color: #007cad;
+  border-style: none;
+  border-radius: 5px;
+}
+
+
+
+
+
+/****************************************************/
