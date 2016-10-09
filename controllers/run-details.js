@@ -19,7 +19,9 @@ router.get('/:id', function(req, res){
         time: runDetails.time,
         pace: runDetails.pace,
         rpe: runDetails.rpe,
-        description: runDetails.description
+        description: runDetails.description,
+        id: req.params.id
+
       });
       console.log(runDetails);
     });

@@ -182,7 +182,7 @@ main > h1 {
   text-align: center;
 }
 
-#edit-button > button {
+#edit-button > a > button {
   font-family: 'Lalezar', cursive;
   background-color: #dadfe1;
   color: #007cad;

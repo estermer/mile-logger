@@ -3,7 +3,7 @@ var router = express.Router();
 var User = require('../models/user.js').model;
 var logic = require('../public/js/logic.js');
 
-router.get('/', function(req, res){
+router.get('/:id', function(req, res){
   if (!req.user) {
     res.redirect('/');
   } else {
@@ -11,7 +11,7 @@ router.get('/', function(req, res){
     User.findOne({username: req.user.username}, function(err, user){
       var runDetails = logic.findRun(user.runningLog, req.params.id);
 
-      res.render('show', {
+      res.render('edit', {
         username: req.user.username,
         runName: runDetails.runName,
         date: runDetails.date,
