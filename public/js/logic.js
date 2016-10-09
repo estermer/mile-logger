@@ -1,4 +1,14 @@
 
+var findRunIndex = function(runningLog, id){
+  for(var i = 0; i < runningLog.length; i++){
+    if(runningLog[i]._id == id){
+      var index = i;
+    }
+  }
+
+  return index;
+};
+
 var findRun = function(runningLog, id){
 
   for(var i = 0; i < runningLog.length; i++){
@@ -6,7 +16,7 @@ var findRun = function(runningLog, id){
       var run = runningLog[i];
     }
   }
-  
+
   return run;
 };
 
@@ -49,6 +59,7 @@ var calculatePace = function(time, miles){
 
 
 module.exports = {
+  findRunIndex: findRunIndex,
   findRun: findRun,
   calculatePace: calculatePace
 };

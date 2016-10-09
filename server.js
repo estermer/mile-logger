@@ -83,7 +83,7 @@ app.use('/:username/run-details', runDeatailsController);
 //HOME PAGE
 app.get('/', function(req, res){
   res.render('home', {
-    user: req.user
+    username: req.user
   })
 });
 

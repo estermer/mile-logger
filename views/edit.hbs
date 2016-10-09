@@ -1,6 +1,6 @@
 <div id="new-run">
   <h1>EDIT YOUR RUN</h1>
-  <form action="/{{username}}/edit-run/edit?_method=PUT" method="POST">
+  <form action="/{{username}}/edit-run/{{id}}/edit?_method=PUT" method="POST">
     <input type="text" name="runName" value="{{runName}}"><br>
     <input type="date" name="date" value="{{date}}"><br>
     <input type="text" name="distance" value="{{distance}}"><br>
