@@ -1,0 +1,28 @@
+<div id="new-run">
+  <h1>EDIT YOUR RUN</h1>
+  <form action="/{{username}}/edit-run/edit?_method=PUT" method="POST">
+    <input type="text" name="runName" value="{{runName}}"><br>
+    <input type="date" name="date" value="{{date}}"><br>
+    <input type="text" name="distance" value="{{distance}}"><br>
+    <input type="text" name="time" value="{{time}}"><br>
+    RATE OF PERCIEVED EXERTION: <select name="rpe">
+      <option>20</option>
+      <option>19</option>
+      <option>18</option>
+      <option>17</option>
+      <option>16</option>
+      <option>15</option>
+      <option>14</option>
+      <option>13</option>
+      <option>12</option>
+      <option>11</option>
+      <option>10</option>
+      <option>9</option>
+      <option>8</option>
+      <option>7</option>
+      <option>0-6</option>
+    </select>
+    <textarea name="description" rows="8" value="{{description}}"></textarea>
+    <input id="newButton" type="submit" value="EDIT RUN">
+  </form>
+</div>
