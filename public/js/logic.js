@@ -32,7 +32,7 @@ var calculatePace = function(time, miles){
 
   //change mhr/min/sec to all seconds
   if(time.length === 3){
-    time[0] = time[0] * 60;
+    time[0] = time[0] * 60 * 60;
     time[1] = time[1] * 60;
   }else if(time.length === 2){
     time[0] = time[0] * 60;
@@ -56,6 +56,7 @@ var calculatePace = function(time, miles){
 
   return pace.join(':');
 };
+console.log(calculatePace("1:02:24", "9.2"));
 
 
 module.exports = {
