@@ -1,6 +1,6 @@
 # Mile Logger App
 
-[http://milelogger.heroku.com/](Deployed Heroku App Link)
+[Deployed Heroku App Link](http://milelogger.heroku.com/)
 
 Designed for runners to log their miles
 can be customized for your team
